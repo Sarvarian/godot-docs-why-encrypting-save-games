@@ -211,7 +211,7 @@ Why does Godot aim to keep its core feature set small?
 ------------------------------------------------------
 
 Godot intentionally does not include features that can be implemented by add-ons
-unless they are used very often. One exemple of this would be advanced
+unless they are used very often. One example of this would be advanced
 artificial intelligence functionality.
 
 There are several reasons for this:
@@ -243,9 +243,9 @@ There are several reasons for this:
 
 For all the reasons above, we have to be selective of what we can accept as core
 functionality in Godot. This is why we are aiming to move some core
-functionality to officially supported add-ons in future versions of Godot. In
-terms of binary size, this also has the advance of making you pay only for what
-you actually use in your project. (In the meantime, you can
+functionality to officially supported add-ons in future versions of Godot.
+In terms of binary size, this also has the advantage of making you pay only for
+what you actually use in your project. (In the meantime, you can
 :ref:`compile custom export templates with unused features disabled <doc_optimizing_for_size>`
 to optimize the distribution size of your project.)
 

@@ -115,7 +115,7 @@ it manually with the following code:
 
     void vertex() {
         VERTEX = (MODELVIEW_MATRIX * vec4(VERTEX, 1.0)).xyz;
-        NORMAL = (MODELVIEW_MATRIX * vec4(NORMAL, 0.0)).xyz;
+        NORMAL = normalize((MODELVIEW_MATRIX * vec4(NORMAL, 0.0)).xyz);
         // same as above for binormal and tangent, if normal mapping is used
     }
 
@@ -208,7 +208,7 @@ these properties, and if you don't write to them, Godot will optimize away the c
 +-------------------------------------------+--------------------------------------------------------------------------------------------------+
 | in vec2 **VIEWPORT_SIZE**                 | Size of viewport (in pixels).                                                                    |
 +-------------------------------------------+--------------------------------------------------------------------------------------------------+
-| in vec4 **FRAGCOORD**                     | Coordinate of pixel center in screen space. ``xy`` specifies  position in window, ``z``          |
+| in vec4 **FRAGCOORD**                     | Coordinate of pixel center in screen space. ``xy`` specifies position in window, ``z``           |
 |                                           | specifies fragment depth if ``DEPTH`` is not used. Origin is lower-left.                         |
 +-------------------------------------------+--------------------------------------------------------------------------------------------------+
 | in bool **FRONT_FACING**                  | ``true`` if current face if front face.                                                          |
